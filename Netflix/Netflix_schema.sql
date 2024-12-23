@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS NetflixDB;
+--CREATE DATABASE IF NOT EXISTS NetflixDB;
 USE NetflixDB;
 
 -- Creación de la tabla Series
