@@ -33,5 +33,15 @@ WHERE genero like '%iencia%';
 SELECT *  from Series
 WHERE titulo like '%he%';
 
+--aggregate functions
+SELECT sum(duracion) as 'Suma_Duracion' from Episodios
+WHERE temporada = 1;
+
+SELECT count(episodio_id) from Episodios;
+
+SELECT *, max(duracion) from Episodios;
+
+SELECT round(avg(duracion),2) from Episodios;
+
 
 
