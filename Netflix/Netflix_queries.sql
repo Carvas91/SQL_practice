@@ -15,3 +15,11 @@ SELECT DISTINCT genero FROM series;
 SELECT *  FROM Series WHERE genero = 'Drama';
 
 SELECT * from Series WHERE anio_lanzamiento > 2015 ORDER by anio_lanzamiento ASC;
+
+SELECT titulo from Episodios WHERE duracion > 30 and rating_imdb > 8;
+
+SELECT titulo from Episodios WHERE temporada = 1 and duracion > 20 ORDER by titulo asc;
+
+SELECT * from Series
+WHERE (genero = 'Comedia' or genero = 'Drama') 
+ORDER by genero asc;
