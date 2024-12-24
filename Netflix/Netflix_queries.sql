@@ -23,3 +23,15 @@ SELECT titulo from Episodios WHERE temporada = 1 and duracion > 20 ORDER by titu
 SELECT * from Series
 WHERE (genero = 'Comedia' or genero = 'Drama') 
 ORDER by genero asc;
+
+SELECT *  from Series
+WHERE genero not in ('Comedia', 'Drama');
+
+SELECT *  from Series
+WHERE genero like '%iencia%';
+
+SELECT *  from Series
+WHERE titulo like '%he%';
+
+
+
