@@ -54,6 +54,10 @@ SELECT serie_id,  sum(duracion) from Episodios
 WHERE serie_id in (3,4)
 GROUP by serie_id;
 
+SELECT serie_id, count(episodio_id) from Episodios GROUP by serie_id;
+
+SELECT serie_id, max(duracion) from Episodios GROUP by serie_id;
+
 
 
 
