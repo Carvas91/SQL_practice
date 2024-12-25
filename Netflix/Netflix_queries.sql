@@ -43,5 +43,19 @@ SELECT *, max(duracion) from Episodios;
 
 SELECT round(avg(duracion),2) from Episodios;
 
+SELECT avg(duracion) from Episodios
+WHEre serie_id in (1,2);
+
+SELECT serie_id,  avg(duracion) as promedio  from Episodios
+WHERE serie_id in (1,2)
+GROUP by serie_id;
+
+SELECT serie_id,  sum(duracion) from Episodios
+WHERE serie_id in (3,4)
+GROUP by serie_id;
+
+
+
+
 
 
