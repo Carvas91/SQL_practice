@@ -67,6 +67,19 @@ SELECT serie_id, avg(duracion) as 'avg duration' from Episodios
 GROUP by serie_id
 HAVING avg(duracion) > 26;
 
+--1st project
+SELECT actor_id, count(serie_id) as 'numSeries' from actuaciones
+GROUP by actor_id
+ORDER by count(serie_id) desc;
+
+SELECT serie_id, avg(rating_imdb) from Episodios
+GROUP by serie_id
+ORDER by avg(rating_imdb) desc;
+
+SELECT * from Episodios
+ORDER by duracion desc;
+
+
 
 
 
