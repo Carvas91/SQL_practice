@@ -58,7 +58,14 @@ SELECT serie_id, count(episodio_id) from Episodios GROUP by serie_id;
 
 SELECT serie_id, max(duracion) from Episodios GROUP by serie_id;
 
+--HAVING
+SELECT serie_id, count(episodio_id) as 'num_episodio' from Episodios
+GROUP by serie_id
+HAVING count(episodio_id) > 10;
 
+SELECT serie_id, avg(duracion) as 'avg duration' from Episodios
+GROUP by serie_id
+HAVING avg(duracion) > 26;
 
 
 
