@@ -79,6 +79,17 @@ ORDER by avg(rating_imdb) desc;
 SELECT * from Episodios
 ORDER by duracion desc;
 
+--Inner joins
+SELECT * FROM Series
+INNER JOIN Actuaciones
+on Series.serie_id = Actuaciones.serie_id
+WHERE Series.titulo = 'The Crown';
+
+
+
+
+
+
 
 
 
