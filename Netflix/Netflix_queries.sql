@@ -100,11 +100,34 @@ on Series.serie_id = Episodios.serie_id;
 SELECT *
 FROM Series
 WHERE genero = 'Drama'
-UNION
+UNION ALL
 SELECT *
 FROM Series
 WHERE genero = 'Comedia'
 ORDER by genero asc;
+
+--Project 2
+SELECT genero,  count(genero)  from Series
+GROUP by genero;
+
+SELECT *  from Series;
+
+SELECT * from Episodios;
+
+
+
+SELECT Series.titulo,avg(Episodios.rating_imdb)
+from Episodios 
+INNER JOIN Series on Episodios.serie_id = Series.serie_id
+group by Series.titulo;
+
+SELECT Series.titulo,sum(Episodios.duracion)
+FROM Episodios
+INNER JOIN Series on Episodios.serie_id = Series.serie_id
+GROUP by Series.titulo
+HAVING Series.titulo = 'Stranger Things';
+
+
 
 
 
