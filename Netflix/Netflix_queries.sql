@@ -119,7 +119,9 @@ SELECT * from Episodios;
 SELECT Series.titulo,avg(Episodios.rating_imdb)
 from Episodios 
 INNER JOIN Series on Episodios.serie_id = Series.serie_id
-group by Series.titulo;
+group by Series.titulo
+ORDER by avg(Episodios.rating_imdb) DESC
+LIMIT 3;
 
 SELECT Series.titulo,sum(Episodios.duracion)
 FROM Episodios
