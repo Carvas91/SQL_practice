@@ -86,6 +86,18 @@ on Series.serie_id = Actuaciones.serie_id
 WHERE Series.titulo = 'The Crown';
 
 
+SELECT * 
+FROM Actuaciones INNER JOIN Actores
+on Actuaciones.actor_id = Actores.actor_id;
+
+--Left JOIN
+SELECT Series.titulo as 'titulo serie',
+Episodios.titulo as 'titulo episodio'
+from Series left JOIN Episodios
+on Series.serie_id = Episodios.serie_id;
+
+
+
 
 
 
