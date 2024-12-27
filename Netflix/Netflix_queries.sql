@@ -96,6 +96,17 @@ Episodios.titulo as 'titulo episodio'
 from Series left JOIN Episodios
 on Series.serie_id = Episodios.serie_id;
 
+--UNION
+SELECT *
+FROM Series
+WHERE genero = 'Drama'
+UNION
+SELECT *
+FROM Series
+WHERE genero = 'Comedia'
+ORDER by genero asc;
+
+
 
 
 
