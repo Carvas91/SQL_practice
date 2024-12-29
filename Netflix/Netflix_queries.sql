@@ -135,6 +135,25 @@ WHERE serie_id = (SELECT serie_id from Series
 WHERE titulo = 'The Office');
 
 
+--Conditionals
+SELECT titulo,  rating_imdb,
+CASE
+	when (rating_imdb>=8) THEN 'Alto'
+	ELSE 'Bajo'
+	END as 'Rating'
+FROM Episodios;
+	
+	
+SELECT 
+    nombre, 
+    strftime('%Y', fecha_nacimiento) AS 'Year',
+    CASE
+        WHEN CAST(strftime('%Y', fecha_nacimiento) AS INTEGER) >= 2000 THEN 'young'
+        ELSE 'Senior'
+    END AS 'Age'
+FROM Actores;
+
+
 
 
 
