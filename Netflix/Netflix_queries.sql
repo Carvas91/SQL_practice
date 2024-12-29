@@ -153,6 +153,11 @@ SELECT
     END AS 'Age'
 FROM Actores;
 
+--CAST
+PRAGMA table_info(Episodios);
+
+SELECT *, CAST(strftime('%Y',fecha_estreno)as INTEGER) as 'anio de lanzamiento'   from Episodios
+WHERE CAST(strftime('%Y',fecha_estreno)as INTEGER) > 2000;
 
 
 
