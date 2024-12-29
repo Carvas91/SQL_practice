@@ -129,7 +129,10 @@ INNER JOIN Series on Episodios.serie_id = Series.serie_id
 GROUP by Series.titulo
 HAVING Series.titulo = 'Stranger Things';
 
-
+--Subqueries
+SELECT *  from Episodios
+WHERE serie_id = (SELECT serie_id from Series
+WHERE titulo = 'The Office');
 
 
 
