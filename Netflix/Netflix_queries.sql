@@ -159,7 +159,8 @@ PRAGMA table_info(Episodios);
 SELECT *, CAST(strftime('%Y',fecha_estreno)as INTEGER) as 'anio de lanzamiento'   from Episodios
 WHERE CAST(strftime('%Y',fecha_estreno)as INTEGER) > 2000;
 
-
+--dates
+SELECT fecha_estreno,  strftime('%Y', fecha_estreno) as 'anio' from Episodios;
 
 
 
