@@ -162,6 +162,10 @@ WHERE CAST(strftime('%Y',fecha_estreno)as INTEGER) > 2000;
 --dates
 SELECT fecha_estreno,  strftime('%Y', fecha_estreno) as 'anio' from Episodios;
 
+-- strings
+SELECT upper(titulo) from Series;
+
+SELECT lower(titulo) from Series;
 
 
 
