@@ -167,6 +167,10 @@ SELECT upper(titulo) from Series;
 
 SELECT lower(titulo) from Series;
 
+SELECT substr(titulo, 1,5) from Episodios;
+
+SELECT titulo , length(titulo) from Series;
+
 
 
 
