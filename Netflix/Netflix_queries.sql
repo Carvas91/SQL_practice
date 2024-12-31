@@ -195,4 +195,13 @@ LIMIT 3)
 group by Series.titulo
 ORDER by avg(Episodios.rating_imdb) DESC;
 
+--CTE
+WITH ListaEpisodios as (
+SELECT serie_id, episodio_id,  titulo from Episodios),
+
+ListaSeries as (
+SELECT serie_id, descripcion from Series)
+
+
+SELECT * from ListaSeries;
 
