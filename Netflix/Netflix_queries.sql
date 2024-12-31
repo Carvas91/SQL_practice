@@ -171,10 +171,13 @@ SELECT substr(titulo, 1,5) from Episodios;
 
 SELECT titulo , length(titulo) from Series;
 
+--math functions
 
+SELECT titulo, duracion/60.0 as 'hrs',  round(duracion/60.0, 2) as 'hrs rounded' from Episodios;
 
-
-
+SELECT titulo, ceiling(duracion/60.0) as 'hrs ceil', 
+floor(duracion/60.0) as 'hrs floor'
+  FROM Episodios;
 
 
 
