@@ -178,6 +178,21 @@ SELECT titulo, duracion/60.0 as 'hrs',  round(duracion/60.0, 2) as 'hrs rounded'
 SELECT titulo, ceiling(duracion/60.0) as 'hrs ceil', 
 floor(duracion/60.0) as 'hrs floor'
   FROM Episodios;
+  
+-- project 3
+SELECT genero from 
+(SELECT genero, count(genero) from Series
+GROUP by genero ORDER by count(genero) DESC)
+LIMIT 3;
 
+SELECT Series.titulo, Series.anio_lanzamiento, Series.genero, avg(Episodios.rating_imdb) 
+from Series
+JOIN Episodios on Series.serie_id = Episodios.serie_id
+where Series.genero in (SELECT genero from 
+(SELECT genero, count(genero) from Series
+GROUP by genero ORDER by count(genero) DESC)
+LIMIT 3)
+group by Series.titulo
+ORDER by avg(Episodios.rating_imdb) DESC;
 
 
