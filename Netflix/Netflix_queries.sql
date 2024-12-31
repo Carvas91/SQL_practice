@@ -203,5 +203,7 @@ ListaSeries as (
 SELECT serie_id, descripcion from Series)
 
 
-SELECT * from ListaSeries;
+SELECT * from ListaEpisodios
+left JOIN ListaSeries
+on ListaEpisodios.serie_id = ListaSeries.serie_id;
 
